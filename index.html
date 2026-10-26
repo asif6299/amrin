@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Amrin Imam</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#fffaf0; --bg2:#ffe6ef; --ink:#4a3b4f; --muted:#7d6c80; --card:#ffffff;
+  --peach:#ffa07a; --pink:#ff6fa8; --mint:#3ed6a8; --sky:#4cc9f0; --lav:#a58bff; --butter:#ffd84d;
+  --flame:#ffb347; --shadow:rgba(120,80,110,.14);
+  --head:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Nunito","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#2b2230;--bg2:#352a3b;--ink:#fbeff3;--muted:#cdb9d2;--card:#3b3042;--shadow:rgba(0,0,0,.35)}
+}
+:root[data-theme="dark"]{--bg:#2b2230;--bg2:#352a3b;--ink:#fbeff3;--muted:#cdb9d2;--card:#3b3042;--shadow:rgba(0,0,0,.35)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--body);color:var(--ink);background:linear-gradient(180deg,var(--bg),var(--bg2));min-height:100vh;overflow-x:hidden;line-height:1.6}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:4rem 1.25rem 3rem;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.5;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:340px;height:340px;background:var(--peach);top:-80px;left:-80px}
+.b2{width:300px;height:300px;background:var(--sky);bottom:-60px;right:-60px;animation-delay:-5s}
+.b3{width:240px;height:240px;background:var(--lav);top:40%;left:55%;animation-delay:-9s}
+@keyframes drift{to{transform:translate(40px,30px) scale(1.12)}}
+
+.hero-inner{position:relative;z-index:2;max-width:640px}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.6rem,9vw,5.4rem);line-height:1.05;letter-spacing:-.02em}
+.hero h1 span{display:inline-block;animation:bounce 2.4s ease-in-out infinite}
+.hero h1 span:nth-child(2n){animation-delay:.25s}
+.hero h1 span:nth-child(3n){animation-delay:.5s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.name{font-family:var(--head);font-size:clamp(1.6rem,5vw,2.6rem);color:#ff3d8b;margin:.4rem auto .8rem;width:fit-content;background:linear-gradient(90deg,#ff3d8b,#ff9a3c,#a58bff,#4cc9f0,#ff3d8b);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 6s linear infinite}
+.sub{color:var(--muted);font-size:1.1rem;max-width:34ch;margin:0 auto 1.8rem}
+
+/* Cake */
+.cake{position:relative;width:200px;height:190px;margin:0 auto 1.8rem;animation:cakein 1s cubic-bezier(.2,1.4,.4,1) both,bob 4s 1s ease-in-out infinite}
+.plate{position:absolute;bottom:0;left:-20px;right:-20px;height:14px;background:var(--lav);border-radius:50%;box-shadow:0 8px 18px var(--shadow)}
+.tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:14px 14px 8px 8px}
+.t1{bottom:10px;width:200px;height:70px;background:var(--pink)}
+.t2{bottom:80px;width:140px;height:55px;background:var(--peach)}
+.t1::before,.t2::before{content:"";position:absolute;top:0;left:0;right:0;height:18px;background:#fff;border-radius:14px 14px 50% 50%/14px 14px 100% 100%;opacity:.95}
+.candle{position:absolute;bottom:135px;width:8px;height:34px;background:linear-gradient(var(--mint),var(--sky));border-radius:3px}
+.c1{left:calc(50% - 36px)}.c2{left:calc(50% - 4px)}.c3{left:calc(50% + 28px)}
+.flame{position:absolute;bottom:100%;left:50%;width:12px;height:20px;margin-left:-6px;background:radial-gradient(circle at 50% 70%,#fff6c4,var(--flame));border-radius:50% 50% 50% 50%/65% 65% 35% 35%;transform-origin:50% 100%;animation:flicker .45s ease-in-out infinite alternate;box-shadow:0 0 16px 4px rgba(255,190,90,.6);transition:opacity .4s,transform .4s}
+@keyframes flicker{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.9,1.12) rotate(3deg)}}
+.out .flame{opacity:0;animation:none;transform:scale(.2)}
+.smoke{position:absolute;bottom:100%;left:50%;width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:0}
+.out .smoke{animation:smoke 1.6s ease-out forwards}
+@keyframes smoke{0%{opacity:.6;transform:translateY(0)}100%{opacity:0;transform:translateY(-40px) scale(3)}}
+
+.btn{font:700 1.05rem var(--body);color:#fff;background:linear-gradient(135deg,#ff5fa2,#ff9a3c);border:0;border-radius:999px;padding:.9rem 1.8rem;cursor:pointer;box-shadow:0 10px 24px rgba(255,95,162,.4);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.btn:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+/* Balloons */
+.balloons{position:absolute;inset:0;pointer-events:none;z-index:1}
+.balloon{position:absolute;bottom:-160px;width:56px;height:70px;border-radius:50% 50% 48% 48%;opacity:.9;animation:rise linear infinite}
+.balloon::after{content:"";position:absolute;top:100%;left:50%;width:1.5px;height:60px;background:var(--muted);opacity:.5}
+@keyframes rise{0%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(18px,-60vh) rotate(4deg)}100%{transform:translate(-10px,-130vh) rotate(-4deg)}}
+
+/* Details */
+.wrap{max-width:900px;margin:0 auto;padding:4rem 1.25rem}
+.wrap h2{font-family:var(--head);font-size:clamp(1.8rem,5vw,2.6rem);text-align:center;margin-bottom:.5rem}
+.lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 2.5rem}
+.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.d{background:var(--card);border-radius:24px;padding:1.6rem;box-shadow:0 12px 30px var(--shadow);transition:transform .3s}
+.d:hover{transform:translateY(-6px) rotate(-.6deg)}
+.d:nth-child(1){border-top:6px solid var(--peach)}
+.d:nth-child(2){border-top:6px solid var(--mint)}
+.d:nth-child(3){border-top:6px solid var(--lav)}
+.d .ico{font-size:2rem}
+.d h3{font-family:var(--head);margin:.3rem 0 .2rem}
+.d p{color:var(--muted)}
+
+.rsvp{text-align:center;padding:2rem 1.25rem 4rem}
+.rsvp p{margin-bottom:1.2rem;color:var(--muted)}
+footer{text-align:center;color:var(--muted);padding:0 1rem 2rem;font-size:.9rem}
+
+/* Urdu text */
+.ur{font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Segoe UI",Tahoma,serif}
+.wrap h2.ur{line-height:2;font-size:clamp(1.7rem,5vw,2.4rem);color:#ff3d8b}
+.lead.ur{max-width:34ch;font-size:clamp(1.05rem,3.2vw,1.3rem);line-height:2.4;color:var(--ink)}
+
+/* Extra animation */
+@keyframes shine{to{background-position:300% 0}}
+@keyframes cakein{from{opacity:0;transform:translateY(60px) scale(.8)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes swing{from{transform:rotate(-10deg)}to{transform:rotate(10deg)}}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.5) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(180deg)}}
+@keyframes pulse{0%,100%{box-shadow:0 10px 24px rgba(255,95,162,.4)}50%{box-shadow:0 10px 36px rgba(255,95,162,.4),0 0 0 12px rgba(255,95,162,.15)}}
+.bunting{position:absolute;top:10px;left:0;right:0;z-index:1;display:flex;justify-content:space-around;pointer-events:none;border-top:2px solid rgba(125,108,128,.35)}
+.flag{width:clamp(20px,5vw,38px);height:clamp(26px,6.5vw,48px);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;animation:swing 3s ease-in-out infinite alternate}
+.sparkles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.spark{position:absolute;font-size:18px;animation:twinkle 2.4s ease-in-out infinite}
+#wish{animation:pulse 2.2s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(34px)}
+.reveal.in{opacity:1;transform:translateY(0);transition:opacity .8s ease,transform .8s cubic-bezier(.2,1.2,.4,1)}
+.d.reveal.in:hover{transform:translateY(-6px) rotate(-.6deg);transition:transform .3s}
+
+/* Confetti */
+.confetti{position:fixed;top:-20px;width:10px;height:14px;z-index:50;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="balloons" id="balloons" aria-hidden="true"></div>
+  <div class="bunting" id="bunting" aria-hidden="true"></div>
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <h1 aria-label="Happy Birthday">
+      <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+      <br>
+      <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>
+    </h1>
+    <p class="name">Amrin Imam</p>
+    <div style="height:1rem"></div>
+
+    <div class="cake" id="cake" aria-hidden="true">
+      <div class="plate"></div>
+      <div class="tier t1"></div>
+      <div class="tier t2"></div>
+      <div class="candle c1"><i class="flame"></i><i class="smoke"></i></div>
+      <div class="candle c2"><i class="flame"></i><i class="smoke"></i></div>
+      <div class="candle c3"><i class="flame"></i><i class="smoke"></i></div>
+    </div>
+
+    <button class="btn" id="wish">Blow out the candles</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 class="ur" lang="ur" dir="rtl">❤️ سالگرہ مبارک ہو امرین! 🎂🌸</h2>
+  <p class="lead ur" lang="ur" dir="rtl">اللہ تمہیں ہمیشہ خوش رکھے، تمہاری ہر دعا قبول کرے، تمہارے ہر خواب کو حقیقت بنائے اور تمہاری زندگی کو محبت اور خوشیوں سے بھر دے۔ تم ہمیشہ مسکراتی رہو، آمین! 🤲🏻❤️✨</p>
+  <section class="details">
+    <article class="d"><div class="ico">📅</div><h3>Saturday, 12 July</h3><p>Add the date of your party here.</p></article>
+    <article class="d"><div class="ico">⏰</div><h3>5:00 PM</h3><p>Add the start time and the end time.</p></article>
+    <article class="d"><div class="ico">📍</div><h3>The Garden House</h3><p>Add the address or a short direction.</p></article>
+  </section>
+</main>
+
+<section class="rsvp">
+  <p>Let us know you are coming by Friday.</p>
+  <button class="btn" id="rsvp">I will be there</button>
+</section>
+<footer>Made with love and a lot of sprinkles.</footer>
+
+<script>
+(function(){
+  var colors=["#ffa07a","#ff6fa8","#3ed6a8","#4cc9f0","#a58bff","#ffd84d"];
+  var wrap=document.getElementById("balloons");
+  for(var i=0;i<9;i++){
+    var b=document.createElement("div");
+    b.className="balloon";
+    b.style.left=(5+i*11)+"%";
+    b.style.background=colors[i%colors.length];
+    b.style.animationDuration=(14+Math.random()*10)+"s";
+    b.style.animationDelay=(-Math.random()*18)+"s";
+    wrap.appendChild(b);
+  }
+  var bun=document.getElementById("bunting");
+  for(var j=0;j<14;j++){
+    var f=document.createElement("i");
+    f.className="flag";
+    f.style.background=colors[j%colors.length];
+    f.style.animationDelay=(-j*.35)+"s";
+    bun.appendChild(f);
+  }
+  var sp=document.getElementById("sparkles"),chars=["✦","✧","★"];
+  for(var k=0;k<18;k++){
+    var s=document.createElement("span");
+    s.className="spark";
+    s.textContent=chars[k%3];
+    s.style.left=Math.random()*96+"%";
+    s.style.top=(12+Math.random()*80)+"%";
+    s.style.color=colors[k%colors.length];
+    s.style.animationDelay=(-Math.random()*3)+"s";
+    s.style.animationDuration=(1.8+Math.random()*2)+"s";
+    sp.appendChild(s);
+  }
+  var items=document.querySelectorAll(".wrap h2,.lead,.d,.rsvp p,#rsvp");
+  items.forEach(function(el,i){el.classList.add("reveal");el.style.transitionDelay=((i%4)*.12)+"s"});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+    items.forEach(function(el){io.observe(el)});
+  }else{items.forEach(function(el){el.classList.add("in")})}
+  function confetti(n){
+    for(var i=0;i<n;i++){
+      var c=document.createElement("i");
+      c.className="confetti";
+      c.style.left=Math.random()*100+"vw";
+      c.style.background=colors[i%colors.length];
+      c.style.borderRadius=Math.random()>.5?"50%":"2px";
+      c.style.animationDuration=(2.5+Math.random()*2.5)+"s";
+      c.style.animationDelay=(Math.random()*.6)+"s";
+      document.body.appendChild(c);
+      setTimeout(function(el){el.remove()},6500,c);
+    }
+  }
+  document.getElementById("wish").addEventListener("click",function(){
+    document.getElementById("cake").classList.toggle("out");
+    this.textContent=document.getElementById("cake").classList.contains("out")?"Light them again":"Blow out the candles";
+    confetti(70);
+  });
+  document.getElementById("rsvp").addEventListener("click",function(){
+    this.textContent="See you there!";
+    confetti(50);
+  });
+})();
+</script>
+</body>
+</html>
